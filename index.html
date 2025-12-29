@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ETH Zürich – Course Quick Links</title>
+
   <style>
     :root {
       --bg: #ffffff;
       --text: #111111;
-      --muted: #666666;
     }
 
     * {
@@ -28,56 +28,51 @@
 
     .container {
       width: 100%;
-      min-height: 100vh;
-      padding: 48px 0;
+      max-width: 1100px;
+      padding: 48px 24px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      gap: 24px;
     }
 
     .course-row {
-      width: 100vw;
-      padding: 32px 48px;
+      width: 100%;
+      padding: 28px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-radius: 0;
-      color: #ffffff;
+      border-radius: 14px;
+      background: #f7f7f7;
     }
 
     .course-title {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-weight: 600;
+      white-space: nowrap;
     }
 
     .links {
       display: flex;
-      gap: 22px;
-      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .link-rhombus {
-      width: 72px;
-      height: 72px;
+      position: relative;
+      padding: 12px 22px;
       transform: skewX(-20deg);
-      border-radius: 10px;
+      border-radius: 6px;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 500;
       transition: transform 0.15s ease, filter 0.15s ease;
-      margin-top: -18px;
-      margin-bottom: -18px;
     }
 
     .link-rhombus span {
-      width: 34px;
-      height: 34px;
-      transform: skewX(20deg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
       display: block;
+      transform: skewX(20deg);
     }
 
     .link-rhombus:hover {
@@ -85,17 +80,12 @@
       filter: brightness(1.08);
     }
 
-    /* Color presets (approximate brand colors) */
+    /* Brand color presets */
     .eth { background: #1f4ed8; }
-    .eth span { background-image: url('https://www.ethz.ch/etc/designs/ethz/img/header/ethz_logo_white.svg'); }
     .gitlab { background: #fc6d26; }
-    .gitlab span { background-image: url('https://about.gitlab.com/images/press/logo/svg/gitlab-icon-rgb.svg'); }
     .moodle { background: #f98012; }
-    .moodle span { background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Moodle_logo.svg'); }
     .expert { background: #3b82f6; }
-    .expert span { background-image: url('https://expert.ethz.ch/favicon.ico'); }
 
-    /* Responsive */
     @media (max-width: 720px) {
       .course-row {
         flex-direction: column;
@@ -109,6 +99,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
 
