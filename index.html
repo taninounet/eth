@@ -28,51 +28,56 @@
 
     .container {
       width: 100%;
-      max-width: 1100px;
-      padding: 48px 24px;
+      min-height: 100vh;
+      padding: 48px 0;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      justify-content: space-between;
     }
 
     .course-row {
-      width: 100%;
-      padding: 28px 32px;
+      width: 100vw;
+      padding: 32px 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-radius: 14px;
-      background: #f7f7f7;
+      border-radius: 0;
+      color: #ffffff;
     }
 
     .course-title {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: 600;
-      white-space: nowrap;
     }
 
     .links {
       display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 22px;
+      align-items: center;
     }
 
     .link-rhombus {
-      position: relative;
-      padding: 12px 22px;
+      width: 72px;
+      height: 72px;
       transform: skewX(-20deg);
-      border-radius: 6px;
+      border-radius: 10px;
       text-decoration: none;
-      color: #ffffff;
-      font-size: 0.95rem;
-      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.15s ease, filter 0.15s ease;
+      margin-top: -18px;
+      margin-bottom: -18px;
     }
 
     .link-rhombus span {
-      display: block;
+      width: 34px;
+      height: 34px;
       transform: skewX(20deg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
     }
 
     .link-rhombus:hover {
@@ -82,9 +87,13 @@
 
     /* Color presets (approximate brand colors) */
     .eth { background: #1f4ed8; }
+    .eth span { background-image: url('https://www.ethz.ch/etc/designs/ethz/img/header/ethz_logo_white.svg'); }
     .gitlab { background: #fc6d26; }
+    .gitlab span { background-image: url('https://about.gitlab.com/images/press/logo/svg/gitlab-icon-rgb.svg'); }
     .moodle { background: #f98012; }
+    .moodle span { background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9a/Moodle_logo.svg'); }
     .expert { background: #3b82f6; }
+    .expert span { background-image: url('https://expert.ethz.ch/favicon.ico'); }
 
     /* Responsive */
     @media (max-width: 720px) {
