@@ -53,26 +53,30 @@
 
     .links {
       display: flex;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
       justify-content: flex-end;
+      align-items: center;
     }
 
     .link-rhombus {
-      position: relative;
-      padding: 12px 22px;
+      width: 56px;
+      height: 56px;
       transform: skewX(-20deg);
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
-      color: #ffffff;
-      font-size: 0.95rem;
-      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: transform 0.15s ease, filter 0.15s ease;
     }
 
-    .link-rhombus span {
-      display: block;
+    .link-rhombus img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
       transform: skewX(20deg);
+      filter: brightness(0) invert(1);
     }
 
     .link-rhombus:hover {
@@ -80,7 +84,7 @@
       filter: brightness(1.08);
     }
 
-    /* Brand color presets */
+    /* Brand colors */
     .eth { background: #1f4ed8; }
     .gitlab { background: #fc6d26; }
     .moodle { background: #f98012; }
@@ -107,7 +111,7 @@
       <div class="course-title">Past Papers</div>
       <div class="links">
         <a class="link-rhombus eth" href="https://exams.vis.ethz.ch/" target="_blank">
-          <span>Exams Portal</span>
+          <img src="https://play-lh.googleusercontent.com/0Si9rY5-zgdJjnIjmP-IJ31nYRH8ryAkJGgYvTmmnxNLAyFcjqPa6DQoBNeKWbab6g" alt="ETH" />
         </a>
       </div>
     </div>
@@ -116,10 +120,10 @@
       <div class="course-title">Intro Programming</div>
       <div class="links">
         <a class="link-rhombus eth" href="https://lec.inf.ethz.ch/infk/eprog/2025/#contact-and-support" target="_blank">
-          <span>Course Page</span>
+          <img src="https://play-lh.googleusercontent.com/0Si9rY5-zgdJjnIjmP-IJ31nYRH8ryAkJGgYvTmmnxNLAyFcjqPa6DQoBNeKWbab6g" alt="ETH" />
         </a>
         <a class="link-rhombus gitlab" href="https://gitlab.inf.ethz.ch/course-eprog2025/students/hongta/-/tree/main" target="_blank">
-          <span>GitLab</span>
+          <img src="https://cdn.worldvectorlogo.com/logos/gitlab-3.svg" alt="GitLab" />
         </a>
       </div>
     </div>
@@ -128,10 +132,10 @@
       <div class="course-title">Algorithms & Data Structures</div>
       <div class="links">
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26169" target="_blank">
-          <span>Moodle</span>
+          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1495463136/pn8oq8zmmspjtjvpcbiv.png?ik-sanitizeSvg=true" alt="Moodle" />
         </a>
         <a class="link-rhombus expert" href="https://expert.ethz.ch/enrolled/AS25/aud/exercises" target="_blank">
-          <span>Expert</span>
+          <img src="https://expert.ethz.ch/static/svg/logo.ccb22a4f.svg" alt="Expert" />
         </a>
       </div>
     </div>
@@ -140,10 +144,10 @@
       <div class="course-title">Linear Algebra</div>
       <div class="links">
         <a class="link-rhombus eth" href="https://ti.inf.ethz.ch/ew/courses/LA25/index.html" target="_blank">
-          <span>Course Page</span>
+          <img src="https://play-lh.googleusercontent.com/0Si9rY5-zgdJjnIjmP-IJ31nYRH8ryAkJGgYvTmmnxNLAyFcjqPa6DQoBNeKWbab6g" alt="ETH" />
         </a>
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26165" target="_blank">
-          <span>Moodle</span>
+          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1495463136/pn8oq8zmmspjtjvpcbiv.png?ik-sanitizeSvg=true" alt="Moodle" />
         </a>
       </div>
     </div>
@@ -152,7 +156,7 @@
       <div class="course-title">Discrete Mathematics</div>
       <div class="links">
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26135" target="_blank">
-          <span>Moodle</span>
+          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1495463136/pn8oq8zmmspjtjvpcbiv.png?ik-sanitizeSvg=true" alt="Moodle" />
         </a>
       </div>
     </div>
