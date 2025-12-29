@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETH Zürich – Course Quick Links</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .course-row {
+      width: 100%;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 14px;
+      background: #f7f7f7;
+    }
+
+    .course-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .link-rhombus {
+      position: relative;
+      padding: 12px 22px;
+      transform: skewX(-20deg);
+      border-radius: 6px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .link-rhombus span {
+      display: block;
+      transform: skewX(20deg);
+    }
+
+    .link-rhombus:hover {
+      transform: skewX(-20deg) translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    /* Color presets (approximate brand colors) */
+    .eth { background: #1f4ed8; }
+    .gitlab { background: #fc6d26; }
+    .moodle { background: #f98012; }
+    .expert { background: #3b82f6; }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .course-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="course-row">
+      <div class="course-title">Past Papers</div>
+      <div class="links">
+        <a class="link-rhombus eth" href="https://exams.vis.ethz.ch/" target="_blank">
+          <span>Exams Portal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-row">
+      <div class="course-title">Intro Programming</div>
+      <div class="links">
+        <a class="link-rhombus eth" href="https://lec.inf.ethz.ch/infk/eprog/2025/#contact-and-support" target="_blank">
+          <span>Course Page</span>
+        </a>
+        <a class="link-rhombus gitlab" href="https://gitlab.inf.ethz.ch/course-eprog2025/students/hongta/-/tree/main" target="_blank">
+          <span>GitLab</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-row">
+      <div class="course-title">Algorithms & Data Structures</div>
+      <div class="links">
+        <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26169" target="_blank">
+          <span>Moodle</span>
+        </a>
+        <a class="link-rhombus expert" href="https://expert.ethz.ch/enrolled/AS25/aud/exercises" target="_blank">
+          <span>Expert</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-row">
+      <div class="course-title">Linear Algebra</div>
+      <div class="links">
+        <a class="link-rhombus eth" href="https://ti.inf.ethz.ch/ew/courses/LA25/index.html" target="_blank">
+          <span>Course Page</span>
+        </a>
+        <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26165" target="_blank">
+          <span>Moodle</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-row">
+      <div class="course-title">Discrete Mathematics</div>
+      <div class="links">
+        <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26135" target="_blank">
+          <span>Moodle</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
