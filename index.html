@@ -9,6 +9,26 @@
     :root {
       --bg: #ffffff;
       --text: #111111;
+
+      /* ETH / academic palette */
+      --eth-blue:  #2f67a8;
+      --eth-green: #4f6f3b;
+      --eth-teal:  #3f8f8b;
+
+      /* GitLab */
+      --gitlab-black:  #2b2f36;
+      --gitlab-orange: #fc6d26;
+
+      /* Moodle */
+      --moodle-orange: #f98012;
+
+      /* Expert / Code Expert */
+      --expert-dark: #1f1b2e;
+      --expert-gold: #f2b705;
+
+      /* VIS / exams */
+      --vis-black:  #1c1f22;
+      --vis-yellow: #ffeb3b;
     }
 
     * {
@@ -19,7 +39,8 @@
       margin: 0;
       min-height: 100vh;
       background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
       display: flex;
       justify-content: center;
@@ -56,40 +77,93 @@
       gap: 16px;
       flex-wrap: wrap;
       justify-content: flex-end;
-      align-items: center;
     }
 
+    /* ===== Rhomboid base ===== */
     .link-rhombus {
-      width: 56px;
-      height: 56px;
+      padding: 14px 26px;
       transform: skewX(-20deg);
-      border-radius: 8px;
+      border-radius: 6px;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s ease, filter 0.15s ease;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
     }
 
-    .link-rhombus img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
+    .link-rhombus span {
+      display: block;
       transform: skewX(20deg);
-      filter: brightness(0) invert(1);
     }
 
     .link-rhombus:hover {
       transform: skewX(-20deg) translateY(-2px);
-      filter: brightness(1.08);
     }
 
-    /* Brand colors */
-    .eth { background: #1f4ed8; }
-    .gitlab { background: #fc6d26; }
-    .moodle { background: #f98012; }
-    .expert { background: #3b82f6; }
+    /* ===== Brand styles ===== */
 
+    /* ETH */
+    .eth {
+      background: var(--eth-blue);
+      color: #ffffff;
+    }
+
+    .eth.green {
+      background: var(--eth-green);
+    }
+
+    .eth.teal {
+      background: var(--eth-teal);
+    }
+
+    /* GitLab */
+    .gitlab {
+      background: var(--gitlab-black);
+      color: var(--gitlab-orange);
+      border: 2px solid var(--gitlab-orange);
+    }
+
+    .gitlab:hover {
+      background: var(--gitlab-orange);
+      color: #ffffff;
+    }
+
+    /* Moodle */
+    .moodle {
+      background: #ffffff;
+      color: var(--moodle-orange);
+      border: 2px solid var(--moodle-orange);
+    }
+
+    .moodle:hover {
+      background: var(--moodle-orange);
+      color: #ffffff;
+    }
+
+    /* Expert / Code Expert */
+    .expert {
+      background: var(--expert-dark);
+      color: var(--expert-gold);
+      border: 2px solid var(--expert-gold);
+    }
+
+    .expert:hover {
+      background: var(--expert-gold);
+      color: var(--expert-dark);
+    }
+
+    /* VIS / Exams */
+    .vis {
+      background: var(--vis-black);
+      color: var(--vis-yellow);
+      border: 2px solid var(--vis-yellow);
+    }
+
+    .vis:hover {
+      background: var(--vis-yellow);
+      color: var(--vis-black);
+    }
+
+    /* Responsive */
     @media (max-width: 720px) {
       .course-row {
         flex-direction: column;
@@ -107,56 +181,61 @@
 <body>
   <div class="container">
 
+    <!-- Past Papers -->
     <div class="course-row">
       <div class="course-title">Past Papers</div>
       <div class="links">
-        <a class="link-rhombus eth" href="https://exams.vis.ethz.ch/" target="_blank">
-          <img src="https://play-lh.googleusercontent.com/0Si9rY5-zgdJjnIjmP-IJ31nYRH8ryAkJGgYvTmmnxNLAyFcjqPa6DQoBNeKWbab6g" alt="ETH" />
+        <a class="link-rhombus vis" href="https://exams.vis.ethz.ch/" target="_blank">
+          <span>Exams</span>
         </a>
       </div>
     </div>
 
+    <!-- Intro Programming -->
     <div class="course-row">
       <div class="course-title">Intro Programming</div>
       <div class="links">
-        <a class="link-rhombus eth" href="https://lec.inf.ethz.ch/infk/eprog/2025/#contact-and-support" target="_blank">
-          <img src="https://play-lh.googleusercontent.com/0Si9rY5-zgdJjnIjmP-IJ31nYRH8ryAkJGgYvTmmnxNLAyFcjqPa6DQoBNeKWbab6g" alt="ETH" />
+        <a class="link-rhombus eth green" href="https://lec.inf.ethz.ch/infk/eprog/2025/#contact-and-support" target="_blank">
+          <span>Course</span>
         </a>
         <a class="link-rhombus gitlab" href="https://gitlab.inf.ethz.ch/course-eprog2025/students/hongta/-/tree/main" target="_blank">
-          <img src="https://cdn.worldvectorlogo.com/logos/gitlab-3.svg" alt="GitLab" />
+          <span>GitLab</span>
         </a>
       </div>
     </div>
 
+    <!-- Algorithms & Data Structures -->
     <div class="course-row">
       <div class="course-title">Algorithms & Data Structures</div>
       <div class="links">
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26169" target="_blank">
-          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1495463136/pn8oq8zmmspjtjvpcbiv.png?ik-sanitizeSvg=true" alt="Moodle" />
+          <span>Moodle</span>
         </a>
         <a class="link-rhombus expert" href="https://expert.ethz.ch/enrolled/AS25/aud/exercises" target="_blank">
-          <img src="https://expert.ethz.ch/static/svg/logo.ccb22a4f.svg" alt="Expert" />
+          <span>Expert</span>
         </a>
       </div>
     </div>
 
+    <!-- Linear Algebra -->
     <div class="course-row">
       <div class="course-title">Linear Algebra</div>
       <div class="links">
-        <a class="link-rhombus eth" href="https://ti.inf.ethz.ch/ew/courses/LA25/index.html" target="_blank">
-          <img src="https://play-lh.googleusercontent.com/0Si9rY5-zgdJjnIjmP-IJ31nYRH8ryAkJGgYvTmmnxNLAyFcjqPa6DQoBNeKWbab6g" alt="ETH" />
+        <a class="link-rhombus eth teal" href="https://ti.inf.ethz.ch/ew/courses/LA25/index.html" target="_blank">
+          <span>Course</span>
         </a>
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26165" target="_blank">
-          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1495463136/pn8oq8zmmspjtjvpcbiv.png?ik-sanitizeSvg=true" alt="Moodle" />
+          <span>Moodle</span>
         </a>
       </div>
     </div>
 
+    <!-- Discrete Mathematics -->
     <div class="course-row">
       <div class="course-title">Discrete Mathematics</div>
       <div class="links">
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26135" target="_blank">
-          <img src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1495463136/pn8oq8zmmspjtjvpcbiv.png?ik-sanitizeSvg=true" alt="Moodle" />
+          <span>Moodle</span>
         </a>
       </div>
     </div>
