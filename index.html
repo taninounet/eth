@@ -6,11 +6,6 @@
   <title>ETH Zürich – Course Quick Links</title>
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-    }
-
     * {
       box-sizing: border-box;
     }
@@ -18,83 +13,108 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: var(--bg);
+      background: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
       display: flex;
-      justify-content: center;
       align-items: center;
     }
 
+    /* vertical distribution */
     .container {
       width: 100%;
-      max-width: 1100px;
-      padding: 48px 24px;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      justify-content: space-between;
+      padding: 48px 0;
     }
 
+    /* course bars */
     .course-row {
-      width: 100%;
-      padding: 28px 32px;
+      width: 100vw;
+      padding: 32px 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-radius: 14px;
-      background: #f7f7f7;
+      color: #ffffff;
     }
 
     .course-title {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: 600;
       white-space: nowrap;
     }
 
+    /* links */
     .links {
       display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
     }
 
+    /* rhomboid icon buttons */
     .link-rhombus {
-      position: relative;
-      padding: 12px 22px;
+      width: 80px;
+      height: 80px;
       transform: skewX(-20deg);
-      border-radius: 6px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      color: #ffffff;
-      font-size: 0.95rem;
-      font-weight: 500;
+      margin-top: -20px;
+      margin-bottom: -20px;
       transition: transform 0.15s ease, filter 0.15s ease;
     }
 
     .link-rhombus span {
-      display: block;
+      width: 38px;
+      height: 38px;
       transform: skewX(20deg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
     }
 
     .link-rhombus:hover {
-      transform: skewX(-20deg) translateY(-2px);
-      filter: brightness(1.08);
+      transform: skewX(-20deg) translateY(-6px);
+      filter: brightness(1.1);
     }
 
-    /* Brand color presets */
+    /* brand colors + icons */
     .eth { background: #1f4ed8; }
-    .gitlab { background: #fc6d26; }
-    .moodle { background: #f98012; }
-    .expert { background: #3b82f6; }
+    .eth span {
+      background-image: url("https://www.ethz.ch/etc/designs/ethz/img/header/ethz_logo_white.svg");
+    }
 
-    @media (max-width: 720px) {
+    .gitlab { background: #fc6d26; }
+    .gitlab span {
+      background-image: url("https://about.gitlab.com/images/press/logo/svg/gitlab-icon-rgb.svg");
+    }
+
+    .moodle { background: #f98012; }
+    .moodle span {
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9a/Moodle_logo.svg");
+    }
+
+    .expert { background: #3b82f6; }
+    .expert span {
+      background-image: url("https://expert.ethz.ch/favicon.ico");
+    }
+
+    /* course bar colors */
+    .row-blue   { background: #1e3a8a; }
+    .row-orange { background: #c2410c; }
+    .row-slate  { background: #334155; }
+    .row-indigo { background: #3730a3; }
+    .row-amber  { background: #92400e; }
+
+    @media (max-width: 768px) {
       .course-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 18px;
-      }
-
-      .links {
-        justify-content: flex-start;
+        gap: 20px;
       }
     }
   </style>
@@ -103,56 +123,56 @@
 <body>
   <div class="container">
 
-    <div class="course-row">
+    <div class="course-row row-blue">
       <div class="course-title">Past Papers</div>
       <div class="links">
         <a class="link-rhombus eth" href="https://exams.vis.ethz.ch/" target="_blank">
-          <span>Exams Portal</span>
+          <span></span>
         </a>
       </div>
     </div>
 
-    <div class="course-row">
+    <div class="course-row row-orange">
       <div class="course-title">Intro Programming</div>
       <div class="links">
         <a class="link-rhombus eth" href="https://lec.inf.ethz.ch/infk/eprog/2025/#contact-and-support" target="_blank">
-          <span>Course Page</span>
+          <span></span>
         </a>
         <a class="link-rhombus gitlab" href="https://gitlab.inf.ethz.ch/course-eprog2025/students/hongta/-/tree/main" target="_blank">
-          <span>GitLab</span>
+          <span></span>
         </a>
       </div>
     </div>
 
-    <div class="course-row">
+    <div class="course-row row-slate">
       <div class="course-title">Algorithms & Data Structures</div>
       <div class="links">
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26169" target="_blank">
-          <span>Moodle</span>
+          <span></span>
         </a>
         <a class="link-rhombus expert" href="https://expert.ethz.ch/enrolled/AS25/aud/exercises" target="_blank">
-          <span>Expert</span>
+          <span></span>
         </a>
       </div>
     </div>
 
-    <div class="course-row">
+    <div class="course-row row-indigo">
       <div class="course-title">Linear Algebra</div>
       <div class="links">
         <a class="link-rhombus eth" href="https://ti.inf.ethz.ch/ew/courses/LA25/index.html" target="_blank">
-          <span>Course Page</span>
+          <span></span>
         </a>
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26165" target="_blank">
-          <span>Moodle</span>
+          <span></span>
         </a>
       </div>
     </div>
 
-    <div class="course-row">
+    <div class="course-row row-amber">
       <div class="course-title">Discrete Mathematics</div>
       <div class="links">
         <a class="link-rhombus moodle" href="https://moodle-app2.let.ethz.ch/course/view.php?id=26135" target="_blank">
-          <span>Moodle</span>
+          <span></span>
         </a>
       </div>
     </div>
